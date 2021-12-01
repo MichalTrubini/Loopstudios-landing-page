@@ -19,11 +19,11 @@
     <nav class="header__nav">
       <img src="images/logo.svg" alt="Loopstudios" class="header__site-logo">
       <ul class="header__nav-list">
-        <li class="header__nav-list-item"><a href="#" class="header__nav-list-link">About</a></li>
-        <li class="header__nav-list-item"><a href="#" class="header__nav-list-link">Careers</a></li>
-        <li class="header__nav-list-item"><a href="#" class="header__nav-list-link">Events</a></li>
-        <li class="header__nav-list-item"><a href="#" class="header__nav-list-link">Products</a></li>
-        <li class="header__nav-list-item"><a href="#" class="header__nav-list-link">Support</a></li>
+        <li class="header__nav-list-item"><a href="#" class="header__nav-list-link line-on-hover">About</a></li>
+        <li class="header__nav-list-item"><a href="#" class="header__nav-list-link line-on-hover">Careers</a></li>
+        <li class="header__nav-list-item"><a href="#" class="header__nav-list-link line-on-hover">Events</a></li>
+        <li class="header__nav-list-item"><a href="#" class="header__nav-list-link line-on-hover">Products</a></li>
+        <li class="header__nav-list-item"><a href="#" class="header__nav-list-link line-on-hover">Support</a></li>
       </ul>
       <div class="header__nav-menu">
         <img src="images/icon-hamburger.svg" alt="menu" class="header__nav-hamburger">
@@ -36,101 +36,238 @@
 
   <main class="main">
     <section class="about">
-        <img src="images/mobile/image-interactive.jpg" alt="interactive" class="about__image">
-        <h2 class="about__heading">
-          The leader in interactive VR
-        </h2>
-        <p class="about__paragraph">
-          Founded in 2011, Loopstudios has been producing world-class virtual reality 
-          projects for some of the best companies around the globe. Our award-winning 
-          creations have transformed businesses through digital experiences that bind 
-          to their brand.
-        </p>
+        <picture >
+          <source
+            srcset="images/mobile/image-interactive.jpg"
+            type="image/jpg"
+            media="all and (max-width:767px)"
+            class="about__image"
+          />
+          <source
+            srcset="images/desktop/image-interactive.jpg"
+            type="image/jpg"
+            media="all and (min-width: 768px)"
+            class="about__image"
+          />
+          <img src="images/mobile/image-interactive.jpg" alt="interactive" class="about__image">
+        </picture>
+        <div class="about__wrapper">
+          <h2 class="about__heading">
+            The leader in interactive VR
+          </h2>
+          <p class="about__paragraph">
+            Founded in 2011, Loopstudios has been producing world-class virtual reality 
+            projects for some of the best companies around the globe. Our award-winning 
+            creations have transformed businesses through digital experiences that bind 
+            to their brand.
+          </p>
+        </div>
     </section>
 
     <section class="content">
-      <h2 class="content__heading">Our creations</h2>
-      <div class="content__topic">
-        <img src="images/mobile/image-deep-earth.jpg" alt="deep earth" class="content__topic-img">
-        <h3 class="content__topic-heading">
-          Deep earth
-        </h3>
+      <div class="content__header-wrapper">
+        <h2 class="content__heading">Our creations</h2>
+        <button class="content__button content__button-dt">
+          See all
+        </button>
       </div>
-      <div class="content__topic">
-        <img src="images/mobile/image-night-arcade.jpg" alt="night arcade" class="content__topic-img">
-        <h3 class="content__topic-heading">
-          Night arcade
-        </h3>
+      <div class="content__topic-wrapper">
+        <div class="content__topic">
+          <picture >
+            <source
+              srcset="images/mobile/image-deep-earth.jpg"
+              type="image/jpg"
+              media="all and (max-width:767px)"
+              class="content__topic-img"
+            />
+            <source
+              srcset="images/desktop/image-deep-earth.jpg"
+              type="image/jpg"
+              media="all and (min-width: 768px)"
+              class="content__topic-img"
+            />
+            <img src="images/mobile/image-deep-earth.jpg" alt="deep earth" class="content__topic-img">
+          </picture>
+          <h3 class="content__topic-heading">
+            Deep earth
+          </h3>
+        </div>
+        <div class="content__topic">
+          <picture >
+            <source
+              srcset="images/mobile/image-night-arcade.jpg"
+              type="image/jpg"
+              media="all and (max-width:767px)"
+              class="content__topic-img"
+            />
+            <source
+              srcset="images/desktop/image-night-arcade.jpg"
+              type="image/jpg"
+              media="all and (min-width: 768px)"
+              class="content__topic-img"
+            />
+            <img src="images/mobile/image-night-arcade.jpg" alt="night arcade" class="content__topic-img">
+          </picture>
+          <h3 class="content__topic-heading">
+            Night arcade
+          </h3>
+        </div>
+        <div class="content__topic">
+          <picture >
+            <source
+              srcset="images/mobile/image-soccer-team.jpg"
+              type="image/jpg"
+              media="all and (max-width:767px)"
+              class="content__topic-img"
+            />
+            <source
+              srcset="images/desktop/image-soccer-team.jpg"
+              type="image/jpg"
+              media="all and (min-width: 768px)"
+              class="content__topic-img"
+            />
+            <img src="images/mobile/image-soccer-team.jpg" alt="soccer team" class="content__topic-img">
+          </picture>
+          <h3 class="content__topic-heading">
+            Soccer team VR
+          </h3>
+        </div>
+        <div class="content__topic">
+          <picture >
+            <source
+              srcset="images/mobile/image-grid.jpg"
+              type="image/jpg"
+              media="all and (max-width:767px)"
+              class="content__topic-img"
+            />
+            <source
+              srcset="images/desktop/image-grid.jpg"
+              type="image/jpg"
+              media="all and (min-width: 768px)"
+              class="content__topic-img"
+            />
+            <img src="images/mobile/image-grid.jpg" alt="grid" class="content__topic-img">
+          </picture>
+          <h3 class="content__topic-heading">
+            The grid
+          </h3>
+        </div>
+        <div class="content__topic">
+          <picture >
+            <source
+              srcset="images/mobile/image-from-above.jpg"
+              type="image/jpg"
+              media="all and (max-width:767px)"
+              class="content__topic-img"
+            />
+            <source
+              srcset="images/desktop/image-from-above.jpg"
+              type="image/jpg"
+              media="all and (min-width: 768px)"
+              class="content__topic-img"
+            />
+            <img src="images/mobile/image-from-above.jpg" alt="from above" class="content__topic-img">
+          </picture>
+          <h3 class="content__topic-heading">
+            From up above VR
+          </h3>
+        </div>
+        <div class="content__topic">
+          <picture >
+            <source
+              srcset="images/mobile/image-pocket-borealis.jpg"
+              type="image/jpg"
+              media="all and (max-width:767px)"
+              class="content__topic-img"
+            />
+            <source
+              srcset="images/desktop/image-pocket-borealis.jpg"
+              type="image/jpg"
+              media="all and (min-width: 768px)"
+              class="content__topic-img"
+            />
+            <img src="images/mobile/image-pocket-borealis.jpg" alt="pocket borealis" class="content__topic-img">
+          </picture>
+          <h3 class="content__topic-heading">
+            Pocket borealis
+          </h3>
+        </div>
+        <div class="content__topic">
+          <picture >
+            <source
+              srcset="images/mobile/image-curiosity.jpg"
+              type="image/jpg"
+              media="all and (max-width:767px)"
+              class="content__topic-img"
+            />
+            <source
+              srcset="images/desktop/image-curiosity.jpg"
+              type="image/jpg"
+              media="all and (min-width: 768px)"
+              class="content__topic-img"
+            />
+            <img src="images/mobile/image-curiosity.jpg" alt="curiosity" class="content__topic-img">
+          </picture>
+          <h3 class="content__topic-heading">
+            The curiosity
+          </h3>
+        </div>
+        <div class="content__topic">
+          <picture >
+            <source
+              srcset="images/mobile/image-fisheye.jpg"
+              type="image/jpg"
+              media="all and (max-width:767px)"
+              class="content__topic-img"
+            />
+            <source
+              srcset="images/desktop/image-fisheye.jpg"
+              type="image/jpg"
+              media="all and (min-width: 768px)"
+              class="content__topic-img"
+            />
+            <img src="images/mobile/image-fisheye.jpg" alt="fisheye" class="content__topic-img">
+          </picture>
+          <h3 class="content__topic-heading">
+            Make it fisheye
+          </h3>
+        </div>
+        <button class="content__button content__button-mb">
+          See all
+        </button>
       </div>
-      <div class="content__topic">
-        <img src="images/mobile/image-soccer-team.jpg" alt="soccer team" class="content__topic-img">
-        <h3 class="content__topic-heading">
-          Soccer team VR
-        </h3>
-      </div>
-      <div class="content__topic">
-        <img src="images/mobile/image-grid.jpg" alt="grid" class="content__topic-img">
-        <h3 class="content__topic-heading">
-          The grid
-        </h3>
-      </div>
-      <div class="content__topic">
-        <img src="images/mobile/image-from-above.jpg" alt="from above" class="content__topic-img">
-        <h3 class="content__topic-heading">
-          From up above VR
-        </h3>
-      </div>
-      <div class="content__topic">
-        <img src="images/mobile/image-pocket-borealis.jpg" alt="pocket borealis" class="content__topic-img">
-        <h3 class="content__topic-heading">
-          Pocket borealis
-        </h3>
-      </div>
-      <div class="content__topic">
-        <img src="images/mobile/image-curiosity.jpg" alt="curiosity" class="content__topic-img">
-        <h3 class="content__topic-heading">
-          The curiosity
-        </h3>
-      </div>
-      <div class="content__topic">
-        <img src="images/mobile/image-fisheye.jpg" alt="fisheye" class="content__topic-img">
-        <h3 class="content__topic-heading">
-          Make it fisheye
-        </h3>
-      </div>
-      <button class="content__button">
-        See all
-      </button>
     </section>
   </main>
 
   <footer class="footer">
-    <div class="footer__left-wrapper">
-      <div class="footer__img-container">
-        <img src="images/logo.svg" alt="Loopstudios" class="footer__site-logo">
+    <div class="footer__container">
+      <div class="footer__left-wrapper">
+        <div class="footer__img-container">
+          <img src="images/logo.svg" alt="Loopstudios" class="footer__site-logo">
+        </div>
+        <div class="footer__links-container">
+          <ul class="footer__nav-list">
+            <li class="footer__nav-list-item"><a href="#" class="footer__nav-list-link line-on-hover">About</a></li>
+            <li class="footer__nav-list-item"><a href="#" class="footer__nav-list-link line-on-hover">Careers</a></li>
+            <li class="footer__nav-list-item"><a href="#" class="footer__nav-list-link line-on-hover">Events</a></li>
+            <li class="footer__nav-list-item"><a href="#" class="footer__nav-list-link line-on-hover">Products</a></li>
+            <li class="footer__nav-list-item"><a href="#" class="footer__nav-list-link line-on-hover">Support</a></li>
+          </ul>
+        </div>
       </div>
-      <div class="footer__links-container">
-        <ul class="footer__nav-list">
-          <li class="footer__nav-list-item"><a href="#" class="footer__nav-list-link">About</a></li>
-          <li class="footer__nav-list-item"><a href="#" class="footer__nav-list-link">Careers</a></li>
-          <li class="footer__nav-list-item"><a href="#" class="footer__nav-list-link">Events</a></li>
-          <li class="footer__nav-list-item"><a href="#" class="footer__nav-list-link">Products</a></li>
-          <li class="footer__nav-list-item"><a href="#" class="footer__nav-list-link">Support</a></li>
-        </ul>
+      <div class="footer__right-wrapper">
+        <div class="footer__social">
+          <a href="#" class="footer__social-link line-on-hover"><img src="images/icon-facebook.svg" alt="facebook" class="footer__social-icon "></a>
+          <a href="#" class="footer__social-link line-on-hover"><img src="images/icon-twitter.svg" alt="twitter" class="footer__social-icon "></a>
+          <a href="#" class="footer__social-link line-on-hover"><img src="images/icon-pinterest.svg" alt="pinterest" class="footer__social-icon"></a>
+          <a href="#" class="footer__social-link line-on-hover"><img src="images/icon-instagram.svg" alt="instagram" class="footer__social-icon"></a>
+        </div>
+        <p class="footer__copyright">
+          © 2021 Loopstudios. All rights reserved.
+        </p>
       </div>
+    </footer>
     </div>
-    <div class="footer__right-wrapper">
-      <div class="footer__social">
-        <img src="images/icon-facebook.svg" alt="facebook" class="footer__social-icon">
-        <img src="images/icon-twitter.svg" alt="twitter" class="footer__social-icon">
-        <img src="images/icon-pinterest.svg" alt="pinterest" class="footer__social-icon">
-        <img src="images/icon-instagram.svg" alt="instagram" class="footer__social-icon">
-      </div>
-      <p class="footer__copyright">
-        © 2021 Loopstudios. All rights reserved.
-      </p>
-    </div>
-  </footer>
   <script src="js/script.js"></script>
 </body>
 </html>

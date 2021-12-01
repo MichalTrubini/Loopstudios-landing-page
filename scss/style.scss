@@ -48,6 +48,8 @@ h3 {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        max-width: 110rem;
+        margin: auto;
     }
 
     &__nav-list {
@@ -72,7 +74,9 @@ h3 {
     }
 
     &__hero {
-        padding:16.3rem 0 22.7rem;
+        padding:16.3rem 0 21.7rem;
+        max-width: 110rem;
+        margin: auto;
     }
 
     &__hero-title {
@@ -116,7 +120,6 @@ h3 {
     &__heading {
         text-align: center;
         margin-bottom: 4.8rem;
-
     }
 
     &__topic {
@@ -124,7 +127,7 @@ h3 {
         position: relative;
     }
     
-    &__topic::after{
+    &__topic::before{
         content: '';
         width: 100%;
         height:99%;
@@ -153,7 +156,10 @@ h3 {
         letter-spacing: 5px;
         padding: 1.3rem 4rem;
         border: 1px solid #000000;
+    }
 
+    &__button-dt {
+        display: none;
     }
 }
 
@@ -171,6 +177,7 @@ h3 {
         color:White;
         font-size: 1.5rem;
         line-height: 2.5rem;
+        position: relative;
     }
 
     &__nav-list {
@@ -202,6 +209,15 @@ h3 {
         opacity: 0.5;
         line-height: 2.5rem;
     }
+
+    &__container {
+        max-width: 110rem;
+        margin: auto;
+    }
+
+    &__social-link {
+        margin-right: 1.6rem;
+    }
 }
 
 @media screen and (min-width:768px) {
@@ -214,6 +230,7 @@ h3 {
         background: url(../images/desktop/image-hero.jpg) no-repeat;
         background-size: contain;
         padding:4rem 4rem 0;
+        margin-bottom: 6rem;
 
         &__nav-menu {
             display: none;
@@ -229,19 +246,260 @@ h3 {
             list-style: none;
             margin-bottom: 0;
             margin-left: 3.2rem;
+            position: relative;
         }
 
         &__nav-list-link {
             font-size: 1.5rem;
             text-transform: capitalize;
+            font-family: 'Alata', sans-serif;
         }
 
         &__hero {
             padding:7rem 0 1.5rem;
+            height: 40.1vw;
         }
+
         &__hero-title {
             padding: 4rem;
             width: 380px;
+        }
+    }
+
+    .about {
+        position: relative;
+        text-align: left;
+        padding: 0 4rem;
+        margin: 0 auto 6rem;
+        max-width: 110rem;
+
+        &__wrapper {
+            width: 45rem;
+            padding:8rem 0 0 8rem;
+            background:white;
+            position:absolute;
+            bottom: 0;
+            right: 0;
+            text-align: left;
+        }
+
+        &__paragraph {
+            padding:0;
+        }
+
+        &__image {
+            width: 68%;
+            margin-bottom: 0;
+            
+        }
+    }
+
+    .content {
+        max-width: 110rem;
+        margin: 0 auto 18rem;
+        padding: 0 4rem;
+
+        &__button-mb {
+            display: none;
+        }
+
+        &__button-dt {
+            display: block;
+            margin: 0;
+        }
+
+        &__button-dt:hover {
+            transition: background-color 0.3s, color 0.3s;
+            background-color:$Black;
+            color: white;
+            cursor: pointer;
+        }
+
+        &__header-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 4rem;
+        }
+
+        &__heading {
+            margin: 0;
+        }
+
+        &__topic-wrapper {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 2rem;
+        }
+
+        &__topic {
+            margin: 0;
+            max-width: 256px;
+        }
+
+        &__topic::after {
+            content: '';
+            width: 100%;
+            height: 100%;
+            background:#D8D8D8;
+            position: absolute;
+            z-index: 10;
+            left: 0;
+            opacity: 0;
+        }
+
+        &__topic:hover::after {
+            cursor: pointer;
+            transition: opacity 0.3s;
+            opacity: 0.8;
+        }
+
+        &__topic:hover > &__topic-heading {
+            transition: color 0.3s;
+            color: black;
+            z-index: 100;
+        }
+
+        &__topic-heading:hover {
+            cursor: pointer;
+        }
+
+    }
+
+    .footer {
+        &__container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        &__nav-list {
+            display: flex;
+            margin-bottom: 0;
+        }
+
+        &__nav-list-item {
+            margin-bottom: 0;
+            margin-right: 1rem;
+            list-style: none;
+        }
+
+        &__left-wrapper {
+            text-align: left;
+        }
+
+        &__right-wrapper {
+            text-align: right;
+        }
+
+        &__site-logo {
+            margin-bottom: 1.4rem;
+        }
+
+        &__social-link {
+            position: relative;
+        }
+    }
+
+    .line-on-hover::after {
+        content: '';
+        width: 24px;
+        height: 2px;
+        background:white;
+        display: block;
+        position: absolute;
+        bottom: -8px;
+        left: 50%;
+        transform: translate(-50%, 0);
+        transition: opacity 0.5s;
+        opacity: 0;
+    }
+
+    .line-on-hover:hover::after {
+        transition: opacity 0.5s;
+        opacity: 1;
+    }
+}
+
+@media screen and (min-width:1148px) {
+    .about, .content {
+        padding: 0;
+    }
+
+    .footer {
+        padding: 4.4rem 0;
+    }
+}
+
+@media screen and (min-width:1440px) {
+
+    h2 {
+        font-size: 4.8rem;
+        line-height: 4.8rem;
+    }
+
+    h3 {
+        font-size: 3.2rem;
+        line-height: 3.2rem; 
+    }
+
+    .header {
+        padding: 4rem 0 0;
+        height: 65rem;
+        margin-bottom: 16rem;
+
+        &__site-logo{
+            width: 192px;
+        }
+
+        &__hero {
+            height: auto;
+            padding: 12.3rem 0 0;
+        }
+
+        &__hero-title {
+            font-size: 7.2rem;
+            line-height: 7rem;
+            width: 65rem;
+        }
+    }
+
+    .about {
+        margin-bottom:18.4rem;
+
+        &__image {
+            width: 731px;
+        }
+
+        &__wrapper {
+            width: 541px;
+            padding:9.6rem 0 0 9.6rem;
+        }
+
+        &__heading {
+            margin-bottom: 2.5rem;
+        }
+    }
+
+    .content {
+        margin-bottom: 18.4rem;
+
+        &__header-wrapper {
+            margin-bottom: 8rem;
+        }
+
+        &__topic-wrapper {
+            grid-gap: 3rem;
+        }
+
+        &__topic-heading {
+            width: 165px;
+        }
+    }
+
+    .footer {
+        &__nav-list-item {
+            margin-right: 3.2rem;
         }
     }
 }
