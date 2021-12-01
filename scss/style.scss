@@ -50,6 +50,8 @@ h3 {
         align-items: center;
         max-width: 110rem;
         margin: auto;
+        position: relative;
+        z-index: 10;
     }
 
     &__nav-list {
@@ -77,6 +79,8 @@ h3 {
         padding:16.3rem 0 21.7rem;
         max-width: 110rem;
         margin: auto;
+        position: relative;
+        z-index: 10;
     }
 
     &__hero-title {
@@ -130,7 +134,7 @@ h3 {
     &__topic::before{
         content: '';
         width: 100%;
-        height:99%;
+        height:100%;
         display: block;
         position:absolute;
         top: 0;
@@ -256,8 +260,8 @@ h3 {
         }
 
         &__hero {
-            padding:7rem 0 1.5rem;
-            height: 40.1vw;
+            padding:7rem 0 0;
+            height: calc(100vw / 2.2);
         }
 
         &__hero-title {
@@ -444,7 +448,7 @@ h3 {
     }
 
     .header {
-        padding: 4rem 0 0;
+        padding: 6.4rem 0 0;
         height: 65rem;
         margin-bottom: 16rem;
 
@@ -484,6 +488,11 @@ h3 {
     .content {
         margin-bottom: 18.4rem;
 
+        &__topic {
+            width: 256px;
+            height: 450px;
+        }
+
         &__header-wrapper {
             margin-bottom: 8rem;
         }
@@ -494,6 +503,8 @@ h3 {
 
         &__topic-heading {
             width: 165px;
+            left:4rem;
+            bottom:3.2rem;
         }
     }
 
